@@ -10,8 +10,8 @@ const elCloseBtn = selectElem('.close-btn');
 const elTemplate = selectElem('#template').content;
 const ModalTemplate = selectElem('#modal__template').content;
 const sidebarMenu = selectElem('sidebar__list');
-// const elSidebarTemplate = selectElem('#sidebar__template').content;
 
+let modalArr = [];
 
 function renderPokemons(pokemonsArr, element, sidebar){
     element.innerHTML = null;
@@ -30,7 +30,7 @@ function renderPokemons(pokemonsArr, element, sidebar){
         element.appendChild(cloneTemplate);
         
         
-        elCardBtn.addEventListener('click', ()=>{
+        elCardBtn.addEventListener('click', (evt)=>{
             elCardBtn.classList.toggle('cards__like--active');
             let findPokemon = Arr.find(pokemon => pokemon.id == elCardBtn.dataset.id)
             
