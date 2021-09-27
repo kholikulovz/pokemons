@@ -232,6 +232,7 @@ a {
 
 .sidebar {
   position: fixed;
+  max-width: 100%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -260,6 +261,21 @@ a {
   overflow: auto;
 }
 
+@media screen and (max-width: 375px) {
+  .sidebar__wrapper {
+    width: 310px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .sidebar__wrapper {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sidebar__wrapper {
+    width: 310px;
+  }
+}
 @media screen and (max-width: 375px) {
   .sidebar__wrapper {
     width: 310px;
