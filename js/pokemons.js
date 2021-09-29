@@ -65,7 +65,7 @@ var pokemons = [
 	"prev_evolution": [
 	{
 		"num": "001",
-		"name": "Bulbasaur"
+		"name": "Bulbasaur" 
 	}
 	],
 	"next_evolution": [
