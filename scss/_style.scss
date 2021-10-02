@@ -157,11 +157,12 @@
         color: #000000;
     }
     &__like{
+        z-index: -1;
         width: 30px;
         height: 30px;
         &--btn{
             border: none;
-            background-color: white;
+            background-color: transparent;
             cursor: pointer;
             &:hover{
                 color: var(--clr-red-dark);
@@ -171,6 +172,10 @@
         &--active{
             color: var(--clr-red-dark);
                 transform: scale(1.2);
+        }
+        &--passive{
+            background-color: transparent;
+            color: transparent;
         }
     }
     &__texts{
@@ -200,9 +205,10 @@
     display: none;
     align-items: flex-start;
     justify-content: last baseline;
+    overflow: auto;
     &--active{
+        z-index: 2;
         display: flex;
-       
     }
     &__wrapper{
         position: fixed;
@@ -216,6 +222,10 @@
         transition: var(--transition);
         padding: 30px;
         overflow: auto;
+
+        .cards__like--btn{
+            display: none;
+        }
     }
 }
   @media screen and (max-width: 375px) {
