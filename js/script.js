@@ -11,7 +11,7 @@ const elModalMenu = selectElem('.sidebar__list');
 let likedArr = [];
 
 function renderPokemons(pokemonsArr, element){
-    element.innerHTML = null;
+    element.innerHTML = null; 
     pokemonsArr.forEach((pokemon) =>{
         const cloneTemplate = elTemplate.cloneNode(true)
         
@@ -33,11 +33,13 @@ function renderPokemons(pokemonsArr, element){
                 likedArr.push(likedPokemon);
             }
              else if(!e.target.classList.contains('cards__like--active')){
-                let found = likedArr.find(el => el.id ==e.target.dataset.id );
+                let found = likedArr.find(el => el.id == e.target.dataset.id );
                 let index = likedArr.indexOf(found);
                 likedArr.splice(index, 1);
             }
-            
+            // likedArr.forEach((pokemon) =>{
+            //     const
+            // })
             renderPokemons(likedArr, elModalMenu);
         })
         element.appendChild(cloneTemplate);

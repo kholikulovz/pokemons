@@ -222,10 +222,6 @@
         transition: var(--transition);
         padding: 30px;
         overflow: auto;
-
-        .cards__like--btn{
-            display: none;
-        }
     }
 }
   @media screen and (max-width: 375px) {
